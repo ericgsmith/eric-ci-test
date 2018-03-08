@@ -1,0 +1,7 @@
+name: eric-ci-test
+recipe: pantheon
+config:
+  framework: drupal8
+  site: eric-ci-test
+  id: f308c9d5-d079-475c-87f4-dc63ddf427a1
+
