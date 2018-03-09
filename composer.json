@@ -59,7 +59,12 @@
     "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
     "post-install-cmd": [
       "@drupal-scaffold",
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "ln -f -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml",
+      "ln -f -s ../../../../simplesamlphp/config/authsources.php ./vendor/simplesamlphp/simplesamlphp/config/authsources.php",
+      "ln -f -s ../../../../simplesamlphp/config/config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php",
+      "ln -f -s ../../../../simplesamlphp/metadata/saml20-idp-remote.php ./vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php",
+      "ln -f -s ../../../../simplesamlphp/metadata/saml20-sp-remote.php ./vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php"
     ],
     "post-update-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
